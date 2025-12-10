@@ -17,7 +17,7 @@ jobs:
 
   trigger:
     needs: clusterfuzz
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     steps:
       - name: dispatch solfuzz CI
         run: |

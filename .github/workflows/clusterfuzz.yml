@@ -5,7 +5,7 @@ on:
 jobs:
   solfuzz-build-and-publish:
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     env:
       MACHINE: linux_clang_icelake
       OBJ_DIR: build/linux/clang/icelake
@@ -83,7 +83,7 @@ jobs:
           # - machine: linux_clang_icelake
           #   artifact_dir: build/linux/clang/icelake
           #   qualifier: highend
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     env:
       MACHINE: ${{ matrix.machine }}
       EXTRAS: fuzz asan ubsan

@@ -22,7 +22,7 @@ jobs:
   # Build job
   build:
     timeout-minutes: 30
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -54,7 +54,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     name: Deploy
     steps:
       - name: Deploy to GitHub Pages
